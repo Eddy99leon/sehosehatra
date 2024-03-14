@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Kanit } from "next/font/google";
 import { ClerkProvider } from '@clerk/nextjs'
+import SidebarProvider from '../contexts/SidebarContext'
+import ThemeProvider from '../contexts/ThemeContext'
 import "./globals.css";
 
-const poppins = Poppins({ 
+const kanit = Kanit({ 
   subsets: ["latin"],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-poppins',
+  variable: '--font-kanit',
 });
 
 export const metadata: Metadata = {
@@ -24,11 +26,15 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="fr">
-        <body className={poppins.variable}>
-          {children}
-        </body>
-      </html>
+      <ThemeProvider>
+        <SidebarProvider>
+          <html lang="fr">
+            <body className={kanit.variable}>
+              {children}
+            </body>
+          </html>
+        </SidebarProvider>
+      </ThemeProvider>
     </ClerkProvider>
   );
 }

@@ -6,7 +6,7 @@ import { ThemeContext } from '../contexts/ThemeContext';
 import { NavLinks } from '@/constants'
 import { Button } from './ui/button'
 import Link from 'next/link'
-import { AlignJustify, MoonStar, Sun } from 'lucide-react'
+import { AlignJustify, CalendarHeart, MoonStar, Sun } from 'lucide-react'
 import Sidebar from './Sidebar';
 import { usePathname } from 'next/navigation';
 
@@ -17,12 +17,15 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <header className='w-full' >
+    <header className='w-full border-b'>
       <Sidebar />
       <div className='wrapper flex justify-between items-center py-4'>
 
-        <Link href="/" className='text-xl font-semibold'>
-          Sehatra
+        <Link href="/" className='flex items-center font-bold'>
+          <CalendarHeart className='text-4xl mr-1 text-ColorViolet' />
+          <span className='text-base sm:text-lg md:text-xl'>
+            Sehatra
+          </span>
         </Link>
 
         <SignedIn>
@@ -34,7 +37,7 @@ const Navbar = () => {
                   key={link.route}
                   className={`
                     ${ isActive && "text-indigo-800" }
-                    text-lg font-semibold tracking-wide
+                    text-lg font-semibold
                   `}
                 >
                   <Link 
@@ -72,7 +75,7 @@ const Navbar = () => {
           </SignedIn>
           {/* Login button */}
           <SignedOut>
-            <Button asChild className='rounded-4'>
+            <Button asChild className='text-sm px-2 sm:px-4'>
               <Link href="/sign-in">
                 Login
               </Link>

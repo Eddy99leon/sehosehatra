@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Kanit } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { ClerkProvider } from '@clerk/nextjs'
 import SidebarProvider from '../contexts/SidebarContext'
 import ThemeProvider from '../contexts/ThemeContext'
 import "./globals.css";
 
-const kanit = Kanit({ 
+const montserrat = Montserrat({ 
   subsets: ["latin"],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-kanit',
 });
 
 export const metadata: Metadata = {
@@ -29,7 +28,7 @@ export default function RootLayout({
       <ThemeProvider>
         <SidebarProvider>
           <html lang="fr">
-            <body className={kanit.variable}>
+            <body className={montserrat.className}>
               {children}
             </body>
           </html>

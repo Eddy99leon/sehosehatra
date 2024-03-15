@@ -63,7 +63,7 @@ const Footer = () => {
             </h1>
             <div className='relative w-[220px] h-[35px] rounded overflow-hidden'>
               <input 
-                type="text" 
+                type="email"
                 className='absolute w-full h-full bg-slate-300 text-gray-700 text-xs sm:text-sm outline-none pl-2 font-medium'
                 placeholder='Ton email ..'
               />
@@ -74,7 +74,7 @@ const Footer = () => {
           </div>
           <p className='text-center text-sm font-medium'>
             Coder avec ❤️ by 
-            <span className='font-semibold'>
+            <span className='font-semibold ml-1'>
               Eddy Andriamisaina.
             </span>
           </p>

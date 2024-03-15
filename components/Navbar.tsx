@@ -75,7 +75,7 @@ const Navbar = () => {
           </SignedIn>
           {/* Login button */}
           <SignedOut>
-            <Button asChild className='text-sm px-2 sm:px-4'>
+            <Button asChild className='button px-2 sm:px-4 hover:bg-ColorViolet/80'>
               <Link href="/sign-in">
                 Login
               </Link>

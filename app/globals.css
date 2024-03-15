@@ -78,3 +78,6 @@
 .wrapper {
   @apply max-w-7xl mx-auto px-4
 }
+.button {
+  @apply text-sm bg-ColorViolet dark:hover:bg-ColorViolet/50 text-white font-semibold
+}

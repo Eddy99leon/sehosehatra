@@ -66,7 +66,7 @@ const Footer = () => {
                 type="email"
                 className='absolute w-full h-full bg-slate-300 text-gray-700 text-xs sm:text-sm outline-none pl-2 font-medium'
                 placeholder='Ton email ..'
-              />
+              /> 
               <button className='absolute right-0 h-full bg-ColorViolet px-3'>
                 <SendHorizontal size={18} />
               </button>
